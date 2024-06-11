@@ -58,4 +58,4 @@ const convert = (s: string, numRows: number): string => {
 
 const s = "PAYPALISHIRING";
 const numRows = 3;
-const res = convert(s, numRows);
+const res_zigzag = convert(s, numRows);
