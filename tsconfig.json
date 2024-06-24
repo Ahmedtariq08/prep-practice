@@ -2,7 +2,7 @@
   "compilerOptions": {
       "strict": false,
       "module": "Node16",
-      "target": "ES5",
+      "target": "esnext",
       "outDir": "bin",
       "rootDir": "src",
       "sourceMap": true
