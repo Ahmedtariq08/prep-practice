@@ -21,7 +21,7 @@
 // Input: nums = [3,3], target = 6
 // Output: [0,1]
 
-function twoSum(nums: number[], target: number): number[] {
+export const twoSum = (nums: number[], target: number): number[] => {
     let outputIndices: number[] = [];
     outerloop: for (let i = 0; i < nums.length; i++) {
         for (let j = 0; j < nums.length; j++) {
@@ -32,9 +32,4 @@ function twoSum(nums: number[], target: number): number[] {
         }
     }
     return outputIndices;
-}
-
-const nums = [2, 7, 11, 15];
-const target = 9;
-const result = twoSum(nums, target);
-console.log(result);
+};

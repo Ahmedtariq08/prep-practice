@@ -15,7 +15,7 @@
 // Output: ""
 // Explanation: There is no common prefix among the input strings.
 
-function longestCommonPrefix(strs: string[]): string {
+export const longestCommonPrefix = (strs: string[]): string => {
     const firstString = strs[0];
     const arr = strs.slice(1);
     let outputStr = "";
@@ -28,4 +28,4 @@ function longestCommonPrefix(strs: string[]): string {
         }
     }
     return outputStr;
-}
+};

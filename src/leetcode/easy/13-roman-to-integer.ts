@@ -27,7 +27,7 @@
 // Output: 3
 // Explanation: III = 3.
 
-function romanToInt(s: string): number {
+export const romanToInt = (s: string): number => {
     const map = new Map<string, number>([
         ["I", 1],
         ["V", 5],
@@ -60,4 +60,4 @@ function romanToInt(s: string): number {
         }
     }
     return nums.reduce((a, b) => a + b);
-}
+};

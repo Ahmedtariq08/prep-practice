@@ -10,6 +10,6 @@
 // Output: true
 // Explanation: 121 reads as 121 from left to right and from right to left.
 
-function isPalindrome(x: number): boolean {
+export const isPalindrome = (x: number): boolean => {
     return x.toString() === x.toString().split("").reverse().join("");
-}
+};
