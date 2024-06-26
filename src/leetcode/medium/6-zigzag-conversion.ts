@@ -37,7 +37,7 @@
 // P L    I  G
 // A      N
 
-const convert = (s: string, numRows: number): string => {
+export const convert = (s: string, numRows: number): string => {
     let arrs: string[] = [];
     let count = 0;
     let dir = 1; // 1 for positive, 0 for negative
@@ -55,7 +55,3 @@ const convert = (s: string, numRows: number): string => {
         return (acc += str);
     }, "");
 };
-
-const s = "PAYPALISHIRING";
-const numRows = 3;
-const res_zigzag = convert(s, numRows);

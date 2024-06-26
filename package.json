@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watch",
+    "test": "jest --json --outputFile=src/leetcode/tests/output.json",
     "serve": "npx nodemon ./src/app.ts"
   },
   "keywords": [],

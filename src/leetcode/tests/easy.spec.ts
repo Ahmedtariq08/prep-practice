@@ -3,6 +3,7 @@ import { twoSum } from "../easy/1-two-sum";
 import { isPalindrome } from "../easy/9-palindrome-number";
 import { romanToInt } from "../easy/13-roman-to-integer";
 import { longestCommonPrefix } from "../easy/14-longest-common-prefix";
+import { maximumWealth } from "../easy/1672-richest-customer-wealth";
 
 describe("Two Sum", () => {
     test("Ex 1", () => {
@@ -49,5 +50,23 @@ describe("Longest common prefix", () => {
     test("Ex 2", () => {
         const result = longestCommonPrefix(["dog", "racecar", "car"]);
         expect(result).toEqual("");
+    });
+});
+
+describe("Richest Customer Wealth", () => {
+    test("Ex 1", () => {
+        const result = maximumWealth([
+            [1, 2, 3],
+            [3, 2, 1],
+        ]);
+        expect(result).toEqual(6);
+    });
+    test("Ex 2", () => {
+        const result = maximumWealth([
+            [1, 5],
+            [7, 3],
+            [3, 5],
+        ]);
+        expect(result).toEqual(10);
     });
 });

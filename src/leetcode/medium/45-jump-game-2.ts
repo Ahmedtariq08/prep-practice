@@ -22,6 +22,7 @@
 // Input: nums = [2,3,0,1,4]
 // Output: 2
 
+// REVIEW
 function jump(nums: number[]): number {
     const n = nums.length;
     let currentPos = 0;
