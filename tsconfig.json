@@ -1,11 +1,15 @@
 {
   "compilerOptions": {
-      "strict": false,
-      "module": "Node16",
-      "target": "esnext",
-      "outDir": "bin",
-      "rootDir": "src",
-      "sourceMap": true,
-      "esModuleInterop": true
+    "target": "ES6",
+    "module": "commonjs",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "rootDir": "./src"
+    // "outDir": "./out",
+    // "rootDir": "./src",
+    // "sourceMap": true,
+    // "moduleResolution": "node",
+    // "target": "esnext",
+    // "strict": false
   }
 }
