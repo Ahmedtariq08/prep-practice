@@ -2,14 +2,18 @@
   "compilerOptions": {
     "target": "ES6",
     "module": "commonjs",
-    "sourceMap": true,
+    "lib": ["ES6"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
-    "rootDir": "./src"
-    // "outDir": "./out",
-    // "rootDir": "./src",
-    // "sourceMap": true,
-    // "moduleResolution": "node",
-    // "target": "esnext",
-    // "strict": false
-  }
+    "rootDir": "./src",
+    "baseUrl": "./",
+    "paths": {
+      "*": ["node_modules/*"]
+    }
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
 }
