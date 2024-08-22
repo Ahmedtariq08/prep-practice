@@ -1,15 +1,3 @@
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
- * }
- */
-
 export class ListNode {
     val: number;
     next: ListNode | null;
@@ -19,9 +7,7 @@ export class ListNode {
     }
 }
 
-/**
- * @returns A Listnode from array of numbers
- */
+/* Returns a Listnode from array of numbers */
 export const arrayToListNode = (nums: number[], reverse: boolean): ListNode | null => {
     const arr = reverse ? nums : nums.reverse();
     return arr.reduce((acc: ListNode, curr: number) => {
@@ -30,12 +16,12 @@ export const arrayToListNode = (nums: number[], reverse: boolean): ListNode | nu
     }, null);
 };
 
-/* Turn Linked List into a number */
-export const getNumber = (list: ListNode | null): number => {
-    if (list == null) {
-        return 0;
+/* Returns an array of number from ListNode */
+export const listNodeToArray = (node: ListNode | null) => {
+    if (node == null) {
+        return [];
     }
-    let currentNode = list;
+    let currentNode = node;
     let hasNext = true;
     const output: number[] = [];
     while (hasNext) {
@@ -46,5 +32,11 @@ export const getNumber = (list: ListNode | null): number => {
             currentNode = currentNode.next;
         }
     }
-    return parseInt(output.join(""));
+    return output;
+};
+
+/* Turn Linked List into a number */
+export const getNumber = (list: ListNode | null): number => {
+    const arr = listNodeToArray(list);
+    return arr.length > 0 ? parseInt(arr.join("")) : 0;
 };
