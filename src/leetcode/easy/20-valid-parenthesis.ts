@@ -1,5 +1,6 @@
 // https://leetcode.com/problems/valid-parentheses/description/
 
+// Solved - 23 August, 2024
 // Given a string s containing just the characters '(', ')', '{', '}', '[' and ']',
 // determine if the input string is valid.
 
@@ -23,23 +24,19 @@
 // Output: false
 
 function isValid(s: string): boolean {
-    const bracketMap = new Map([
-        ["(", ")"],
-        ["{", "}"],
-        ["[", "]"],
-    ]);
-
-    let closingBrackets = [];
-    for (let char of s) {
-        if ("({[".includes(char)) {
-            closingBrackets.push(bracketMap.get(char)!);
-        } else if (")}]".includes(char)) {
-            const correctClosingBracket = closingBrackets.pop();
-            if (correctClosingBracket !== char) {
-                console.log(char, correctClosingBracket);
+    const correctStartingBr = { ")": "(", "}": "{", "]": "[" };
+    const startingBrackets: string[] = [];
+    for (let i = 0; i < s.length; i++) {
+        const br = s[i];
+        if ("({[".includes(br)) {
+            startingBrackets.push(br);
+        } else {
+            const lastStartingBr = startingBrackets.pop();
+            const correctBr = correctStartingBr[br as keyof typeof correctStartingBr];
+            if (lastStartingBr != correctBr) {
                 return false;
             }
         }
     }
-    return closingBrackets.length === 0;
+    return startingBrackets.length === 0;
 }
